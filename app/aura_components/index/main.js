@@ -4,17 +4,19 @@ define(['aura_components/index/routes.js',
 	return {
 		initialize: function() {
 		
-			var t = new view({
-				el: this.options.el
-			});
+			var indexView = new view({tagName: "div"});
+			var self = this;
+			indexView.render(this.$el);
 
-			
-			routes.extend({
-				explore: function(){
-					console.log("explore");
-				}
-			});
-			new routes;
+			console.log(routes.prototype);
+
+			routes.prototype.explore = function(){
+				indexView.remove();
+				new venues({tagName: "div"}).render(self.$el);
+			};
+				
+
+			new routes();
 		}
 	};
 });

@@ -3,8 +3,8 @@ define(['bower_components/backbone/backbone', 'text!./../index.hbs'], function(b
   				initialize: function(){ 
   					this.$el.html(template);
   				},
-  				render: function(){
-  					
+  				render: function(container){
+  					container.html(this.$el);
   				}
   			});
 });

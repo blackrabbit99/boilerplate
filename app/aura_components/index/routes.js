@@ -5,6 +5,7 @@ define([''], function(view) {
 			},
 		 
 			initialize: function(attributes) {
+				console.log("routes start");
 				Backbone.history.start();	
 			}
 		});
