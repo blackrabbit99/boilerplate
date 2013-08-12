@@ -1,4 +1,4 @@
-define(['bower_components/backbone/backbone'], function(template) {
+define(['aura_components/index/views/index.js'], function(view) {
   	return AppRouter = Backbone.Router.extend({
  			routes: {
 				'': 'explore',
@@ -6,7 +6,8 @@ define(['bower_components/backbone/backbone'], function(template) {
 			},
 		 
 			initialize: function(attributes) {
-				console.log("RRRRRRRRRRRRR");
+				console.log(this);
+				new view;
 				Backbone.history.start();	
 			},
 		 
