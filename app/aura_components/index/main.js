@@ -1,7 +1,8 @@
-define(['text!./index.hbs', 'bower_components/backbone/backbone'], function(template) {
+define(['text!./index.hbs', 'aura_components/index/routes.js'], function(template, routes) {
   return {
-    initialize: function() {
-    	this.html(template);
-    }
+	initialize: function() {
+		this.html(template);
+		var routesK = new routes();
+	}
   };
 });
