@@ -3,6 +3,7 @@ define([''], function(view) {
  			routes: {
 				'explore': 'explore',
 				'comment': 'comment',
+				'venue/:id': 'venue'
 			},
 		 
 			initialize: function(attributes) {

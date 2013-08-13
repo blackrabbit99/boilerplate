@@ -7,17 +7,22 @@ define(['aura_components/index/routes.js',
 		
 			var indexView = new view({tagName: "div"});
 			var self = this;
+			var com = new venues({tagName: "div"});
 			indexView.render(this.$el);
 
 			console.log(routes.prototype);
 
 			routes.prototype.explore = function(){
 				indexView.remove();
-				new venues({tagName: "div"}).render(self.$el);
+				com.render(self.$el);
 			};
 
 			routes.prototype.comment = function(){
 				indexView.remove();
+				new comment({tagName: "div"}).render(self.$el);
+			};
+
+			routes.prototype.venue = function(id){
 				new comment({tagName: "div"}).render(self.$el);
 			};
 				
